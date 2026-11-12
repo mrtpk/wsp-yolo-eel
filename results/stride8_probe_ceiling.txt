@@ -1,0 +1,35 @@
+probe training: 67 targets, 5572 hard negatives, 200000 sampled easy negatives
+probe row: |w|=2.68 (current 3.12), cos(probe, current)=0.828
+
+CURRENT row (any bias): held-out targets=67
+  thr(logit)    TP  recall  FP all FP bg-only
+       -1.38     7    0.10      66         15
+       -2.90    14    0.21     117         27
+       -4.50    20    0.30     245         67
+       -5.52    27    0.40     386        121
+       -6.77    34    0.51     689        276
+       -7.31    40    0.60     904        401
+       -8.22    47    0.70    1449        738
+       -9.48    53    0.79    2714       1588
+
+BEST LINEAR probe row (any bias): held-out targets=67
+  thr(logit)    TP  recall  FP all FP bg-only
+        2.95     7    0.10      71         17
+        2.13    14    0.21     129         28
+        1.31    20    0.30     234         64
+        0.75    27    0.40     344        109
+        0.36    34    0.51     429        152
+       -0.17    40    0.60     607        234
+       -0.81    47    0.70     935        424
+       -1.91    53    0.79    1860       1053
+
+BEST LINEAR probe row on FIT half (optimistic): held-out targets=67
+  thr(logit)    TP  recall  FP all FP bg-only
+        3.69     7    0.10      25          1
+        3.37    14    0.21      37          3
+        2.30    20    0.30     112         27
+        1.56    27    0.40     191         50
+        1.11    34    0.51     256         72
+        0.38    40    0.60     459        158
+       -0.19    47    0.70     708        275
+       -0.51    53    0.79     887        373

@@ -1,0 +1,6 @@
+model stride-32 eel bias -8.039 -> -100
+model stride-32 eel bias -7.996 -> -100
+saved weights/eel_1cls_no_s32.pt
+images compared: 200
+images with different detection count: 0
+max |box diff| px: 0   max |conf diff|: 0   max mask pixel disagreement: 0

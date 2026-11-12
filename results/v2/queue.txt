@@ -1,0 +1,120 @@
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_e2e --e2e 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2m_nms --e2e 0
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_nms --e2e 0 --cls o2o --box o2o --mask o2o
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_cls_mean --e2e 0 --cls mean
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_box_mean --e2e 0 --box mean
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_all_mean --e2e 0 --cls mean --box mean --mask mean
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_cls_o2o_box_o2m --e2e 0 --cls o2o
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_mask_o2o --e2e 0 --mask o2o
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post50 --e2e 1 --postnms 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post40 --e2e 1 --postnms 0.4
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post30 --e2e 1 --postnms 0.3
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2m_nms50 --e2e 0 --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2m_nms40 --e2e 0 --iou 0.4
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post50_mt-1 --e2e 1 --postnms 0.5 --mask_t -1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post50_mt-0.5 --e2e 1 --postnms 0.5 --mask_t -0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post50_mt+0.5 --e2e 1 --postnms 0.5 --mask_t 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2o_post50_mt-2 --e2e 1 --postnms 0.5 --mask_t -2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak1 --e2e 1 --peak 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2 --e2e 1 --peak 2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak3 --e2e 1 --peak 3
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2m_nms50_flip --e2e 0 --iou 0.5 --fliptta 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_o2m_nms60_flip --e2e 0 --iou 0.6 --fliptta 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_mix_cls_mean_nms50_flip --e2e 0 --iou 0.5 --cls mean --fliptta 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_post50 --e2e 1 --peak 2 --postnms 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_k5 --e2e 1 --peak 2 --peak_k 5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_mixmean_peak2_nms50 --e2e 0 --cls mean --peak 2 --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_clso2o_boxo2m_peak2_nms50 --e2e 0 --cls o2o --box o2m --peak 2 --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_mixmean_nms50 --e2e 0 --cls mean --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_clso2o_boxo2m_nms50 --e2e 0 --cls o2o --box o2m --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_imgsz576 --e2e 1 --peak 2 --imgsz 576
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_b8+0.5 --e2e 1 --peak 2 --b8 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_b8+1 --e2e 1 --peak 2 --b8 1.0
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_b8-0.5 --e2e 1 --peak 2 --b8 -0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_b16+0.5 --e2e 1 --peak 2 --b16 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_peak2_b16-0.5 --e2e 1 --peak 2 --b16 -0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --weights weights/v2_merged_mean.pt --tag sub_merged_e2e --e2e 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --weights weights/v2_merged_mean.pt --tag sub_merged_peak2 --e2e 1 --peak 2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --weights weights/v2_merged_mean.pt --tag sub_merged_post50 --e2e 1 --postnms 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --weights weights/v2_merged_mean.pt --tag sub_merged_peak2_post50 --e2e 1 --peak 2 --postnms 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_mixmean_peak2_nms50_flip --e2e 0 --cls mean --peak 2 --iou 0.5 --fliptta 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag sub_clso2o_boxo2m_peak2_nms50_flip --e2e 0 --cls o2o --box o2m --peak 2 --iou 0.5 --fliptta 1
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_base_o2o_e2e --e2e 1
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_base_o2o_post50 --e2e 1 --postnms 0.5
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_peak2 --e2e 1 --peak 2
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_peak2_post50 --e2e 1 --peak 2 --postnms 0.5
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_mixmean_peak2_nms50 --e2e 0 --cls mean --peak 2 --iou 0.5
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_clso2o_boxo2m_peak2_nms50 --e2e 0 --cls o2o --box o2m --peak 2 --iou 0.5
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_o2o_e2e --e2e 1
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_base_peak2 --e2e 1 --peak 2
+uv run python experiments/dump_dets.py weights/eel_1cls.pt work/eel1 results/v2/dets_peak2.jsonl --peak 2
+uv run python experiments/temporal_rescore.py results/v2/dets_peak2.jsonl work/eel1/labels/train > results/v2/temporal_peak2.txt 2>&1; tail -3 results/v2/temporal_peak2.txt
+uv run python experiments/finetune.py --data work/split_train.yaml --epochs 6 --name ft_e6
+uv run python experiments/eval_config.py --data work/split_test.yaml --weights results/v2/train/ft_e6/weights/last.pt --tag late_ft6_o2o_e2e --e2e 1
+uv run python experiments/eval_config.py --data work/split_test.yaml --weights results/v2/train/ft_e6/weights/last.pt --tag late_ft6_o2o_post50 --e2e 1 --postnms 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --weights results/v2/train/ft_e6/weights/last.pt --tag late_ft6_peak2 --e2e 1 --peak 2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_ref_o2m_nms50 --e2e 0 --iou 0.5
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v60 --e2e 0 --iou 0.99 --vote 0.6
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v60_m --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v50_m --e2e 0 --iou 0.99 --vote 0.5 --vote_mask 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v70_m --e2e 0 --iou 0.99 --vote 0.7 --vote_mask 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v60_m_p2 --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1 --vote_p 2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v60_m_min3 --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1 --vote_min 0.3
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_mix_v60_m --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1 --cls mean --box mean --mask mean
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_clso2o_v60_m --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1 --cls o2o --box o2m
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag vote_o2m_v60_m_flip --e2e 0 --iou 0.99 --vote 0.6 --vote_mask 1 --fliptta 1
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag peak2_pen2 --peak 2 --peak_pen 2
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag peak2_pen4 --peak 2 --peak_pen 4
+uv run python experiments/eval_config.py --data work/robust/clean.yaml --tag peak2_pen8 --peak 2 --peak_pen 8
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_e6/weights/last.pt weights/wise_a0.75.pt 0.75
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_e6/weights/last.pt weights/wise_box_a1.pt 1.0 box
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_check_a0_peak2 --weights weights/wise_check_a0.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_a0.25_peak2 --weights weights/wise_a0.25.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_a0.5_peak2 --weights weights/wise_a0.5.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_a0.75_peak2 --weights weights/wise_a0.75.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_cls_a1_peak2 --weights weights/wise_cls_a1.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_bb_a1_peak2 --weights weights/wise_bb_a1.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_box_a1_peak2 --weights weights/wise_box_a1.pt
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_e6/weights/last.pt weights/wise_a0.15.pt 0.15
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_e6/weights/last.pt weights/wise_a0.35.pt 0.35
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_a0.15_peak2 --weights weights/wise_a0.15.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_a0.35_peak2 --weights weights/wise_a0.35.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --e2e 0 --cls mean --box o2m --mask o2m --iou 0.5 --peak 2 --tag late_base_mixmean_peak2_nms50
+uv run python experiments/eval_config.py --data work/split_test.yaml --e2e 0 --cls mean --box o2m --mask o2m --iou 0.5 --peak 2 --tag late_wise_a0.25_mixmean_peak2_nms50 --weights weights/wise_a0.25.pt
+uv run python experiments/finetune.py --data work/split_train.yaml --epochs 6 --name ft_head6 --freeze 23
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_fthead6_peak2 --weights results/v2/train/ft_head6/weights/last.pt
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_head6/weights/last.pt weights/wise_head_a0.5.pt 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_head_a0.5_peak2 --weights weights/wise_head_a0.5.pt
+uv run python experiments/merge_heads_wide.py weights/wise_a0.25.pt weights/eel_v2.pt 0.5 --box-o2m --mask-o2m
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_eelv2_peak2_post50 --weights weights/eel_v2.pt --peak 2 --postnms 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_eelv2_peak2 --weights weights/eel_v2.pt --peak 2
+uv run python experiments/eval_config.py --data work/eel1.yaml --tag full_eelv2_peak2_post50 --weights weights/eel_v2.pt --peak 2 --postnms 0.5
+uv run python experiments/finetune.py --data work/split_train.yaml --epochs 4 --name ft_gentle4 --lr0 0.0005 --gentle 1
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_ftgentle4_peak2 --weights results/v2/train/ft_gentle4/weights/last.pt
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_gentle4/weights/last.pt weights/wise_gentle_a0.5.pt 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_gentle_a0.5_peak2 --weights weights/wise_gentle_a0.5.pt
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_gentle4/weights/last.pt weights/wise_gentle_a0.25.pt 0.25
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_gentle_a0.25_peak2 --weights weights/wise_gentle_a0.25.pt
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_gentle4/weights/last.pt weights/wise_gentle_a0.75.pt 0.75
+uv run python experiments/eval_config.py --data work/split_test.yaml --peak 2 --tag late_wise_gentle_a0.75_peak2 --weights weights/wise_gentle_a0.75.pt
+uv run python experiments/dump_mask_crops.py weights/eel_v2.pt work/eel1 work/crops_fit.pt --to 470754
+uv run python experiments/dump_mask_crops.py weights/eel_v2.pt work/eel1 work/crops_test.pt --from 470754
+uv run python experiments/train_mask_refiner.py work/crops_fit.pt work/crops_test.pt weights/mask_refiner.pt --epochs 30
+uv run python experiments/train_mask_refiner.py work/crops_fit.pt work/crops_test.pt weights/mask_refiner.pt --epochs 30 --eval_every 10
+uv run python experiments/train_mask_refiner.py work/crops_fit.pt work/crops_test.pt weights/mask_refiner.pt --epochs 12 --eval_every 4
+uv run python experiments/eval_mask_refiner.py weights/mask_refiner.pt work/crops_test.pt
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_base_o2o_e2e
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_eelv2_peak2_post50 --weights weights/eel_v2.pt --peak 2 --postnms 0.5
+uv run python experiments/finetune.py --data work/split_train.yaml --epochs 4 --name ft_mask1 --lr0 0.0005 --gentle 1 --mask_ratio 1 --batch 8
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_ftmask1_peak2_post50 --weights results/v2/train/ft_mask1/weights/last.pt --peak 2 --postnms 0.5
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_mask1/weights/last.pt weights/wise_mask1_a0.5.pt 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_wise_mask1_a0.5_peak2_post50 --weights weights/wise_mask1_a0.5.pt --peak 2 --postnms 0.5
+uv run python experiments/merge_heads_wide.py weights/wise_mask1_a0.5.pt weights/wise_mask1_merged.pt 0.5 --box-o2m --mask-o2m
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_mask1merged_peak2_post50 --weights weights/wise_mask1_merged.pt --peak 2 --postnms 0.5
+uv run python experiments/eval_config.py --data work/split_test.yaml --tag late_mask1merged_peak2_post50 --weights weights/wise_mask1_merged.pt --peak 2 --postnms 0.5
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_mask1/weights/last.pt weights/wise_mask1_a0.25.pt 0.25
+uv run python experiments/merge_heads_wide.py weights/wise_mask1_a0.25.pt weights/wise_mask1_a0.25_merged.pt 0.5 --box-o2m --mask-o2m
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_mask1merged_a0.25_peak2_post50 --weights weights/wise_mask1_a0.25_merged.pt --peak 2 --postnms 0.5
+uv run python experiments/wise_ft.py weights/eel_1cls.pt results/v2/train/ft_mask1/weights/last.pt weights/wise_mask1_a0.75.pt 0.75
+uv run python experiments/merge_heads_wide.py weights/wise_mask1_a0.75.pt weights/wise_mask1_a0.75_merged.pt 0.5 --box-o2m --mask-o2m
+uv run python experiments/eval_config.py --data work/split_test.yaml --native 1 --tag late_native_mask1merged_a0.75_peak2_post50 --weights weights/wise_mask1_a0.75_merged.pt --peak 2 --postnms 0.5

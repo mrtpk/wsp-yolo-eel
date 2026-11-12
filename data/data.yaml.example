@@ -1,0 +1,7 @@
+# Example Ultralytics dataset file for these scripts. The study data is not published.
+# Layout: <root>/images/train/*.png and <root>/labels/train/*.txt (YOLO segmentation polygons).
+path: /path/to/your/dataset
+train: images/train
+val: images/train
+names:
+  0: eel

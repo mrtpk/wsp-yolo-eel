@@ -1,0 +1,8 @@
+
+mislocal (n=73): median IoU old 0.406  mask-box 0.345  union 0.379
+  mask-box: IoU>=0.5 old 0.0% -> new 23.3%   IoU>=0.75 old 0.0% -> new 5.5%   improved 32.9% worse 60.3%
+  union   : IoU>=0.5 old 0.0% -> new 24.7%   IoU>=0.75 old 0.0% -> new 5.5%   improved 32.9% worse 60.3%
+
+tp (n=300): median IoU old 0.909  mask-box 0.829  union 0.830
+  mask-box: IoU>=0.5 old 100.0% -> new 90.3%   IoU>=0.75 old 90.0% -> new 69.7%   improved 12.3% worse 84.3%
+  union   : IoU>=0.5 old 100.0% -> new 90.7%   IoU>=0.75 old 90.0% -> new 70.0%   improved 12.3% worse 84.7%

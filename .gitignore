@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.cache
+# not published: the checkpoint, the frames and the labels belong to a third party
+*.pt
+*.zip
+data/*
+!data/data.yaml.example
+!data/README.md
+weights/*
+!weights/README.md
+runs/
+work/

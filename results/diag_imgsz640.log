@@ -1,0 +1,13 @@
+32/99864/99896/998128/998160/998192/998224/998256/998288/998320/998352/998384/998416/998448/998480/998512/998544/998576/998608/998640/998672/998704/998736/998768/998800/998832/998864/998896/998928/998960/998992/998998/998
+imgsz 640  GT eels: 1003  found@conf0.25: 922 (91.9%)  detections: 1008  false positives: 86
+misses: 81  -> localization (no anchor box IoU>=0.5): 1   score (box ok, score<0.25): 80
+  score-misses: median best score 0.019
+detections by stride: {8: 41, 16: 881, 32: 0}
+
+recall by eel length (polygon half-perimeter, px in 640x360 frame):
+  [   0,  60) n=   42  recall=0.333  det by stride {8: 14, 16: 0, 32: 0}  mean best score s8=0.21 s16=0.01 s32=0.00
+  [  60, 100) n=  128  recall=0.734  det by stride {8: 26, 16: 68, 32: 0}  mean best score s8=0.17 s16=0.34 s32=0.00
+  [ 100, 150) n=  163  recall=0.933  det by stride {8: 1, 16: 151, 32: 0}  mean best score s8=0.02 s16=0.72 s32=0.00
+  [ 150, 200) n=  293  recall=0.976  det by stride {8: 0, 16: 286, 32: 0}  mean best score s8=0.00 s16=0.83 s32=0.00
+  [ 200, 300) n=  298  recall=0.997  det by stride {8: 0, 16: 297, 32: 0}  mean best score s8=0.00 s16=0.85 s32=0.00
+  [ 300,2000) n=   79  recall=1.000  det by stride {8: 0, 16: 79, 32: 0}  mean best score s8=0.00 s16=0.80 s32=0.00
