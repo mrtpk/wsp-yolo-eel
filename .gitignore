@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 *.cache
-# not published: the checkpoint, the frames and the labels belong to a third party
+# not published: the checkpoint, the frames and the labels are not public
 *.pt
 *.zip
 data/*

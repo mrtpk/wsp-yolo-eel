@@ -6,7 +6,7 @@ Write-up: [Weight-Space Programming - Editing an eel detector without new data](
 
 ## What you can and cannot do with this repository
 
-- **Not included:** the base checkpoint, the frames and the labels. They belong to a third party. Every checkpoint that the scripts make is derived from the base checkpoint, so none of them is included either. You cannot rerun the study as it is.
+- **Not included:** the base checkpoint, the frames and the labels. They are not public. Every checkpoint that the scripts make is derived from the base checkpoint, so none of them is included either. You cannot rerun the study as it is.
 - **Included:** every experiment script, the evaluation log (`results/v2/runs.jsonl`, one JSON line per evaluation), the summary logs, the report, and six figures (four of them show frame crops).
 - **Withheld:** per-frame files that hold label geometry (`results/diag_*.csv`, `results/v2/fp_all_*.csv`, `results/v2/dets_peak2.jsonl`: ground-truth boxes and lengths per frame, per-frame detections). The report gives their aggregates. `experiments/export_blog_numbers.py` needs them, so it does not run from this repository.
 - You can run the scripts on your own YOLO26-seg checkpoint and data. They are not bit-exact, and paths in the logs are relative to the repository root (`work/` was a scratch folder for data copies and splits).
