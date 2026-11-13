@@ -46,6 +46,10 @@ Pinned versions: `ultralytics==8.4.22`, `torch 2.15.0`, `torchvision 0.29.2` (`u
 
 The study ran with Claude Code as the agent that wrote and ran the experiments, on a CPU only machine (14 cores).
 
+## Licence
+
+The code and the documents of this repository: MIT (`LICENSE`). The photos in `docs/figures/` show frames of a dataset that is not public; they are not under the MIT licence. Ultralytics, a dependency that is not included, is under AGPL-3.0.
+
 ## Reference
 
 - [Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming), Takehi, Teoh, Zhang and Khattab, MIT CSAIL.
